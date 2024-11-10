@@ -1,0 +1,48 @@
+header {
+    height: 4rem;
+    display: flex;
+    background-color: rgba(98, 5, 248, 0.1);
+    box-shadow: 0 2px 3px rgba(169, 4, 235, 0.5);
+}
+
+header nav#navbar {
+    display: flex;
+    height: 3rem;
+    width: 100%;
+    padding: 0 1rem;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1rem;
+}
+
+header nav#navbar .nav-brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+header nav#navbar .nav-list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    color: whitesmoke;
+    gap: 1rem;
+    font-weight: 200;
+}
+
+header nav#navbar .nav-brand img {
+    width: 3rem;
+    height: 3rem;
+    transition: 2s;
+}
+
+header nav#navbar .nav-brand img:hover {
+    width: 6rem;
+    text-decoration: none;
+}
+
+header nav#navbar .nav-list li:hover {
+    font-size: 1.25rem;
+    transition: 1s;
+}

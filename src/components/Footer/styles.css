@@ -1,0 +1,30 @@
+.footer-container {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid whitesmoke;
+    padding: 1rem;
+    margin: 0.05rem auto 0 auto;
+    font-size: 0.75rem;
+    font-weight: 25;
+  }
+
+
+  .sizeSmiley {
+    margin: auto;
+    padding: auto;
+    font-size: 1rem;
+    color: whitesmoke;
+}
+
+  @media (max-width: 640px) {
+    h5 {
+    font-size: 0.5rem;
+    font-weight: 25;
+    }
+  }
+  

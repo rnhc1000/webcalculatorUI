@@ -89,11 +89,13 @@ These web pages were coded using ReactJS exploring hooks such as useState, useLo
 [![My Skills](https://skillicons.dev/icons?i=react,vite,yarn,typescript,html,css,javascript,postgres,git,github,vscode,redhat,aws)](https://skillicons.dev)
 
 In order to build the app do the following:
+<br />
 - identify your ip address and run as follows:
   <br />
-  at the root. run yarn dev --host 127.0.0.1 --port 7500, bear in mind the origin is prtotevcted by Cors
+  at the project root, run:  <<yarn dev --host 127.0.0.1 --port 7500>, bear in mind the origin is prtotected by CORS.
   <br />
-  - tweak the src/utils/system.ts file, to access the API 
+  tweak the src/utils/system.ts file, to access the API 
+ <br />
   export const BASE_URL = import.meta.env.VITE_BACKEND_URL ?? "http://<IP_ADDRESS>:8095/api/v1";
  <br />
 
