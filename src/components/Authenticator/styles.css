@@ -1,33 +1,32 @@
 .login-form {
-
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 5rem;
+    margin-top: 2rem;
+    width: 100%;
 }
-
 
 input[type="email"],
 input[type="password"] {
     display: grid;
-    width: 100%;
     max-width: 90%;
     gap: 2rem;
     align-items: center;
     justify-items: left;
-    width: 20rem;
-    height: 2.5rem;
+    width: 22rem;
+    height: 3rem;
     margin-bottom: 1rem;
     padding-left: 0.5rem;
     padding-bottom: 0.5rem;
     font-size: 1.25rem;
-    border: 0.15rem solid rgba(169, 4, 235, 0.5);
+    border: 0.15rem solid rgba(169, 4, 235, 0.75);
     background: none;
     border-radius: 10px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    color: whitesmoke;
+    color: white;
 }
 
 input span {
@@ -36,19 +35,21 @@ input span {
 
 input[type="email"]::placeholder,
 input[type="password"]::placeholder {
-    color: var(--gray-200);
-    align-items: center;
-    justify-content: center;
-    align-items: center;
-    font-weight: 50;
-    font-style: italic;
-    font-size: 0.75rem;
+
+    padding-left: 0.25rem;
+    font-size: 1.5rem;
+}
+
+input[type="email"]:focus {
+
+    background: none;
+
 }
 
 input[type="submit"],
 input[type="reset"],
 input[type="button"],
-button { 
+button {
     font-size: 1.5rem;
     text-align: left;
     border-radius: 10px;
@@ -72,20 +73,21 @@ button {
     user-select: none;
 }
 
-input:invalid{  
+input:invalid {
     border: 2px solid #ff7d87;
     box-shadow: #ff7d87;
 }
+
 input:required {
     color: red;
 }
 
 input:focus {
     border: 1px solid rgba(169, 4, 235, 0.5);
- }
+}
 
-button:hover {
-    font-size: 2rem;
+button[type="submit"]:hover {
+    font-size: 2.5rem;
     font-weight: 400;
     color: rgba(169, 4, 235, 0.5);
     transition: 1s;
@@ -105,9 +107,12 @@ label {
 
 button[type="submit"] {
     margin-top: 1rem;
+    font-size: 1.8rem;
+    color: white;
+    font-weight: 100;
 }
 
-.underlineHover{
+.underlineHover {
     text-align: center;
     font-weight: 200;
     color: white;
@@ -121,16 +126,16 @@ button[type="submit"] {
 }
 
 .underlineHover:hover {
-    color:rgba(169, 4, 235, 0.5);
+    color: rgba(169, 4, 235, 0.5);
     cursor: pointer;
     font-size: 2rem;
     transition-duration: 500ms;
     text-decoration: rgba(169, 4, 235, 0.5);
-    
+
 }
 
 .underlineHover:hover:after {
-    color:rgba(169, 4, 235, 0.5);
+    color: rgba(169, 4, 235, 0.5);
     transition-duration: 1000ms;
 }
 

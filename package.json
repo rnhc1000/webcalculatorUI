@@ -12,6 +12,8 @@
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^6.1.6",
+    "@mui/material": "^6.1.6",
     "@types/react-router-dom": "^5.3.3",
     "ag-grid-community": "^32.3.2",
     "ag-grid-react": "^32.3.2",

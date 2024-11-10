@@ -18,7 +18,12 @@ interface Values {
 
 const CalculatorSchema = Yup.object().shape({
     operator: Yup.string()
-        .required('Required')
+        .required('Select an operation!'),
+    operandOne: Yup.string()
+    .max(16, 'Number too large!'),
+    operandTwo: Yup.string()
+    .max(16, 'Number too large!')
+
 });
 
 const Select = ({ label, ...props }) => {
@@ -36,10 +41,19 @@ const Select = ({ label, ...props }) => {
     );
 };
 
+
+// const StyledSelect = styled.select`
+//   color: var(--blue);
+// `;
+
+
 // Styled components ....
 const StyledSelect = styled.select`
-color: whitesmoke;
-background-color: black;
+color: var(--white);
+background-color: rgba(0, 0, 0, 0.75);
+font-size: 1.25rem;
+padding-left: 0.5rem;
+padding-top: 0.1rem;
 `;
 
 const StyledErrorMessage = styled.div`
@@ -57,7 +71,9 @@ const StyledErrorMessage = styled.div`
 `;
 
 const StyledLabel = styled.label`
-margin-top: 0.25rem;
+margin: 0 auto;
+text-align: left;
+
 `;
 
 export default function Calculator() {
@@ -66,7 +82,7 @@ export default function Calculator() {
     return (
         <section>
             <Fade>
-                <DatePipe></DatePipe>
+                <DatePipe />
                 <div className="login-form">
 
                     <Formik
@@ -88,10 +104,11 @@ export default function Calculator() {
                             }, 500);
                         }}
                     >
+
                         {({ errors, touched }) => (
-                            <Form>
-                                <Select label="Select an operator" name="operator" id="operator">
-                                <option value="">Select an operation!</option>
+                            <Form className="login-form">
+                                <Select label="" name="operator" id="operator">
+                                    <option value="">Select an operation!</option>
                                     <option value="addition">Addition(+)</option>
                                     <option value="subtraction">Subtraction(−)</option>
                                     <option value="multiplication">Multiplication(⨯)</option>
@@ -101,24 +118,27 @@ export default function Calculator() {
                                 </Select>
                                 <p className="form-error">{errors.operator && touched.operator ? <div>{errors.operator}</div> : null}</p>
 
-                                <label htmlFor="operandOne">operandOne</label>
+                                <label htmlFor="operandOne"></label>
                                 <Field
                                     id="operandOne"
                                     name="operandOne"
-                                    placeholder="operandOne"
+                                    maxLength="16"
+                                    placeholder="Enter a number"
                                     type="number" />
                                 <p className="form-error">{errors.operandOne && touched.operandOne ? <div>{errors.operandOne}</div> : null}</p>
 
-                                <label htmlFor="operandTwo">operandTwo</label>
+                                <label htmlFor="operandTwo"></label>
                                 <Field
                                     id="operandTwo"
                                     name="operandTwo"
-                                    placeholder="operandTwo"
+                                    maxLength="16"
+                                    placeholder="Enter a number"
                                     type="number" />
                                 <p className="form-error">{errors.operandTwo && touched.operandTwo ? <div>{errors.operandTwo}</div> : null}</p>
 
-                                <button type="submit">Submit</button>
+                                <button type="submit">Process it!</button>
                             </Form>
+
                         )}
                     </Formik>
                 </div>
