@@ -1,22 +1,8 @@
 .button-delete {
-    background-color: none; /* Green */
-    border: none;
-    margin: 0.25rem 0.75rem 0.25rem auto;
-    padding: 0.25rem;
-    text-align: center;
-    text-decoration: none;
     display: flex;
-    flex-direction: row;
-    align-items: right;
-    justify-content: center;
-    font-size: 1.25rem;
-    border-radius: 0.25rem;
-    width: 5rem;
   }
   
   .button-delete:hover {
-    color: orange;
-    background-color: #0F227F;
-    width: 2rem;
-    font-size: 1.15rem;
+    color: green;
   }
+

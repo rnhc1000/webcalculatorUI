@@ -1,99 +1,101 @@
 .login-form {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    gap: 0.5rem;
+    align-items: left;
     margin-top: 2rem;
+    width: 100%;
+}
+
+.login-form label {
+    text-align: center;
+}
+
+select,
+input[type="number"] {
+    width: 22rem;
+    height: 3rem;
+    padding-left: 0.25rem;
+    font-size: 1.5rem;
+    border: 0.15rem solid rgba(169, 4, 235, 0.5);
+    background: rgb(0, 0, 0);
+    border-radius: 10px;
+    color: #FFF;
+    appearance: none;
+}
+
+select:focus,
+input[type="number"]:focus {
+    outline: none;
+    border: 2px solid rgb(9, 9, 177);
 }
 
 
-input[type="number"],
-input[type="text"],
-select {
-    display: grid;
-    max-width: 90%;
-    gap: 2rem;
-    align-items: center;
-    justify-items: left;
-    width: 20rem;
-    height: 2.5rem;
-    margin-bottom: 1rem;
-    padding-left: 0.5rem;
-    padding-bottom: 0.5rem;
-    font-size: 1.25rem;
-    border: 0.15rem solid rgba(169, 4, 235, 0.5);
-    background: none;
-    border-radius: 10px;
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    color: whitesmoke;
+    margin: 0;
 }
 
 input span {
     color: red;
 }
 
-input[type="email"]::placeholder,
-input[type="password"]::placeholder {
-    color: var(--gray-200);
-    align-items: center;
-    justify-content: center;
-    align-items: center;
-    font-weight: 50;
-    font-style: italic;
-    font-size: 0.75rem;
+input[type="number"]::placeholder {
+
+    padding-left: 0.25rem;
+    font-size: 1.25rem;
+
 }
 
 input[type="submit"],
 input[type="reset"],
-input[type="button"],
-button { 
-    font-size: 1.5rem;
-    text-align: left;
+input[type="button"] {
+    font-size: 2rem;
+    text-align: center;
     border-radius: 10px;
     background-color: var(--gray-700);
     border: 2px solid var(--gray-700);
     color: white;
-    width: 10rem;
     text-decoration: underline;
     font-weight: 300;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    display: inline-block;
-    line-height: initial;
-    transition: background-color 200ms ease-in-out, border 200ms ease-in-out,
-        transform 200ms ease-in-out;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    user-select: none;
+    margin-top: 1rem;
 }
 
-input:invalid{  
+input:invalid {
     border: 2px solid #ff7d87;
     box-shadow: #ff7d87;
 }
+
 input:required {
     color: red;
 }
 
 input:focus {
     border: 1px solid rgba(169, 4, 235, 0.5);
- }
+}
 
-button:hover {
-    font-size: 2rem;
+
+button[type="submit"] {
+    color: #FFF;
+    opacity: 0.75; 
+    transition: opacity 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    width: 100%;
+    text-align: center;
+}
+
+button[type="submit"]:hover {
+    font-size: 2.5rem;
     font-weight: 400;
     color: rgba(169, 4, 235, 0.5);
-    transition: 1s;
+    opacity: 2;
 }
 
 label {
     font-weight: 200;
     display: flex;
-    margin-bottom: 1rem;
+    margin-bottom: 0.25rem;
     color: white;
 }
 
@@ -104,9 +106,12 @@ label {
 
 button[type="submit"] {
     margin-top: 1rem;
+    font-size: 2rem;
+    color: white;
+    font-weight: 100;
 }
 
-.underlineHover{
+.underlineHover {
     text-align: center;
     font-weight: 200;
     color: white;
@@ -120,16 +125,16 @@ button[type="submit"] {
 }
 
 .underlineHover:hover {
-    color:rgba(169, 4, 235, 0.5);
+    color: rgba(169, 4, 235, 0.5);
     cursor: pointer;
     font-size: 2rem;
     transition-duration: 500ms;
     text-decoration: rgba(169, 4, 235, 0.5);
-    
+
 }
 
 .underlineHover:hover:after {
-    color:rgba(169, 4, 235, 0.5);
+    color: rgba(169, 4, 235, 0.5);
     transition-duration: 1000ms;
 }
 

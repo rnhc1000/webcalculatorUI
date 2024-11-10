@@ -14,9 +14,9 @@ interface Values {
 
 const SignupSchema = Yup.object().shape({
     password: Yup.string()
-      .min(8, 'Too Short!')
-      .required('Required'),
-    email: Yup.string().email('Invalid email').required('Required'),
+      .min(8, 'Too Short! - Minimum 8 characters!')
+      .required('Enter a valid password'),
+    email: Yup.string().email('Invalid email').required('Enter a valid email!'),
   });
 
 export default function Authenticator() {
@@ -24,7 +24,7 @@ export default function Authenticator() {
     return (
         <section>
             <Fade>
-                <DatePipe></DatePipe>
+                <DatePipe/>
                 <div className="login-form">
 
                     <Formik

@@ -20,21 +20,12 @@
     font-size: 2rem;
 }
 
-.underlineHover:after {
-    display: flex;
-    left: 0;
-    bottom: 1rem;
-    width: 100%;
-    height: 0.2rem;
-    transition: width 500ms;
-    background-color: white;
-
-}
 
 .underlineHover:hover {
-    color: white;
+    color: #7F057F;
     cursor: pointer;
     font-size: 2.5rem;
+    font-weight: 500;
     transition-duration: 500ms;
 }
 
