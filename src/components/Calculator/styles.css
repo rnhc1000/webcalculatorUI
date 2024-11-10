@@ -1,16 +1,15 @@
 .login-form {
-
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5rem;
+    margin-top: 2rem;
 }
 
 
-input[type="email"],
-input[type="password"] {
+input[type="number"],
+input[type="text"],
+select {
     display: grid;
-    width: 100%;
     max-width: 90%;
     gap: 2rem;
     align-items: center;

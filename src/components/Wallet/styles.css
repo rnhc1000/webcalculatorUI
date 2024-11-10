@@ -1,0 +1,19 @@
+.wallet-list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    color: var(--white);
+    gap: 0.05rem;
+    font-weight: 200;
+    align-items: center;
+
+}
+
+.calc-wallet {
+    display:flex;
+    transition: width 2s;
+}
+
+.balance{
+    color: #09f521;   
+}
