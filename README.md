@@ -1,19 +1,17 @@
 ## Web Calculator UI - @Ricardo Ferreira
 WebCalculator
 
-Implements a ReactJS based app, using TypeScript, React Router, React Hooks, React Context,AG-GRID Datatable, JWT Decode and other libraries, to provide a couple of simple math functionalities (addition, subtraction, multiplication, division, square root, and a random string generation) where each functionality will have a separate cost per request.
-<br />
+Implements a React based app, using TypeScript, React Router, React Hooks, React Context,AG-GRID Datatable, JWT Decode, Axios and other libraries, to provide a couple of simple math functionalities (addition, subtraction, multiplication, division, square root, and a random string generation) where each functionality will have a separate cost per request.
+<br /><br />
 Users will have a starting credit/balance. Each request will be deducted from the user’s
 balance. If the user’s balance isn’t enough to cover the request cost, the request shall be denied.
-<br />
-The design is a try to move from the conventional login/password pages and I tried to  enrich the UX with information in real time of the balance available, and checking the 
-operations done, and minimizing the number of clicks after each operation.
-<br />
-Each operation is persisted into a database and can be retrieved through a AG-GRID based datatable supporting pagination, searching and sorting and offers a soft-delete button for those
-operations the user no longer wants to be at the table!
-<br />
-This app consumes services offered by a REStful API at https://api.ferreiras.dev.br/swagger-ui/index.html and does not make any math of any sort at the front-end. All maths are done in the backend as requested mand their results available at specific endpoints.
-<br />
+<br /><br />
+The design is a try to move from the Bootstrap/MaterialUI conventional login/password pages and the UX is enriched with information in real time about the balance available, operations done, and minimizing the number of clicks after each operation.
+<br /><br />
+Each operation is persisted into a PostgreSQL database and can be retrieved through an AG-GRID based datatable supporting pagination, searching and sorting and offers a soft-delete button for those operations the user no longer wants to be at the table! Bear in mind the soft-delete do not remove that row from the database. It is still there, but the colummn deleted is set to true. Ride thru the API to recover the soft-deleted rows.
+<br /><br />
+This app consumes services offered by a RESTful API at https://api.ferreiras.dev.br/swagger-ui/index.html and does not make any math of any sort at the front-end. All maths are done in the backend as requested and their results put availablae at each endpoint.
+<br /><br />
 The user must be authenticated and authorized accordingly to have full access to the API services.
 <br />
 
@@ -44,9 +42,8 @@ Why don't you take a look at this short video....to see how it works...
 ## _Overview_
 These web pages were coded using ReactJS exploring hooks such as useState, useLocation, useEffect, useContext:
 - src|
-    - App.tsx
-    - assets|
-    - components|
+    - assets
+    - components
       - Footer
       - Header
       - Login
@@ -54,6 +51,7 @@ These web pages were coded using ReactJS exploring hooks such as useState, useLo
       - Operations
       - Welcome
       - Result
+    - hooks 
     - routes
       - Home
       - Login
@@ -86,15 +84,15 @@ These web pages were coded using ReactJS exploring hooks such as useState, useLo
 - Live Site URL: [https://webcalculator.ferreiras.dev.br] 
 ## _Built with_
 
-[![My Skills](https://skillicons.dev/icons?i=react,vite,yarn,typescript,html,css,javascript,postgres,git,github,vscode,redhat,aws)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=react,vite,yarn,typescript,jest,html,css,javascript,postgres,git,github,vscode,redhat,nginx,aws)](https://skillicons.dev)
 
 In order to build the app do the following:
 <br />
 - identify your ip address and run as follows:
   <br />
-  at the project root, run:  <<yarn dev --host 127.0.0.1 --port 7500>, bear in mind the origin is prtotected by CORS.
+  at the project root, run:  <<yarn dev --host 127.0.0.1 --port 7500>, bear in mind the origin has been protected by CORS.
   <br />
-  tweak the src/utils/system.ts file, to access the API 
+  Tweak the src/utils/system.ts file, to access the API as follows:
  <br />
   export const BASE_URL = import.meta.env.VITE_BACKEND_URL ?? "http://<IP_ADDRESS>:8095/api/v1";
  <br />
@@ -112,7 +110,7 @@ After you have everything in place:
 
 yarn dev --host <IP_ADDRESS> --port 7500
 
-adn the UI will be available at:
+and the UI will be available at:
 http://<IP_ADRESS>:7500 
 
 Just in case you want to see how the UI works:
