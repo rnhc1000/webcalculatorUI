@@ -109,12 +109,12 @@ export default function Calculator() {
                             <Form className="login-form">
                                 <Select label="" name="operator" id="operator">
                                     <option value="">Select an operation!</option>
-                                    <option value="addition">Addition(+)</option>
-                                    <option value="subtraction">Subtraction(−)</option>
-                                    <option value="multiplication">Multiplication(⨯)</option>
-                                    <option value="division">Division(÷)</option>
-                                    <option value="square_root">Square Root(√)</option>
-                                    <option value="random_string">Random Words(⩜)</option>
+                                    <option value="addition">Addition(+)....................<em>$1.99</em></option>
+                                    <option value="subtraction">Subtraction(−)..............$2.49</option>
+                                    <option value="multiplication">Multiplication(⨯).........$3.99</option>
+                                    <option value="division">Division(÷).....................$4.99</option>
+                                    <option value="square_root">Square Root(√)............$7.99</option>
+                                    <option value="random_string">Random Words(⩜).....$9.99</option>
                                 </Select>
                                 <p className="form-error">{errors.operator && touched.operator ? <div>{errors.operator}</div> : null}</p>
 

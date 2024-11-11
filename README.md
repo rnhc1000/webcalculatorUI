@@ -79,12 +79,12 @@ These web pages were coded using ReactJS exploring hooks such as useState, useLo
 - public|
 
 ## _Screenshot_
-[![](./calculatorUI.png)]()
+[![](./webCalculator.png)]()
 ## _Links_
 - Live Site URL: [https://webcalculator.ferreiras.dev.br] 
 ## _Built with_
 
-[![My Skills](https://skillicons.dev/icons?i=react,vite,yarn,typescript,jest,html,css,javascript,postgres,git,github,vscode,redhat,nginx,aws)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=react,vite,yarn,typescript,jest,html,css,javascript,git,github,vscode,ubuntu,nginx,docker,aws)](https://skillicons.dev)
 
 In order to build the app do the following:
 <br />
@@ -92,29 +92,29 @@ In order to build the app do the following:
   <br />
   at the project root, run:  <<yarn dev --host 127.0.0.1 --port 7500>, bear in mind the origin has been protected by CORS.
   <br />
-  Tweak the src/utils/system.ts file, to access the API as follows:
+- Tweak the src/utils/system.ts file, to access the API as follows:
  <br />
   export const BASE_URL = import.meta.env.VITE_BACKEND_URL ?? "http://<IP_ADDRESS>:8095/api/v1";
  <br />
 
-  If running both UI, DB, and API in the same container, check the CORS configuration at:
+- If running both UI, DB, and API in the same container, check the CORS configuration at:
   <br />
-https://github.com/rnhc1000/calculatorWeb/src/main/java/br/dev/ferreiras/calculatorweb/config/CorsSecurityConfiguration.java
+- https://github.com/rnhc1000/calculatorWeb/src/main/java/br/dev/ferreiras/calculatorweb/config/CorsSecurityConfiguration.java
 
 <br />
 
-Tweak it as per your environment and see the instructions available at 
-https://github.com/rnhc1000/calculatorWeb/tree/main/src/main/resources/dockerBuild.sh
+- Tweak it as per your environment and see the instructions available at 
+- https://github.com/rnhc1000/calculatorWeb/tree/main/src/main/resources/dockerBuild.sh
 
-After you have everything in place:
+- After you have everything in place:
 
-yarn dev --host <IP_ADDRESS> --port 7500
+- yarn dev --host <IP_ADDRESS> --port 7500
 
-and the UI will be available at:
-http://<IP_ADRESS>:7500 
+- and the UI will be available at:
+- http://<IP_ADRESS>:7500 
 
-Just in case you want to see how the UI works:
-https://youtu.be/CUdN-P-14So
+- Just in case you want to see how the UI works:
+- https://youtu.be/CUdN-P-14So
 
  ## _How I did it_
 ```jsx
