@@ -4,7 +4,10 @@ import { Fade } from 'react-awesome-reveal';
 import DatePipe from '../DatePipe';
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
-
+import Button, { ButtonProps } from '@mui/material/Button';
+import { purple } from '@mui/material/colors';
+import { styled } from '@mui/material/styles';
+import {CredentialsDTO} from '../../models/auth'
 interface Values {
 
     email: string;
@@ -19,6 +22,14 @@ const SignupSchema = Yup.object().shape({
     email: Yup.string().email('Invalid email').required('Enter a valid email!'),
   });
 
+  const ColorButton = styled(Button)<ButtonProps>(({ theme }) => ({
+    color: theme.palette.getContrastText(purple[500]),
+    backgroundColor: purple[500],
+    '&:hover': {
+      backgroundColor: purple[700],
+    },
+  }));
+
 export default function Authenticator() {
     const navigate = useNavigate();
     return (
@@ -30,18 +41,19 @@ export default function Authenticator() {
                     <Formik
                         initialValues={{
                             password: '',
-                            email: '',
+                            username: '',
                         }}
                         validationSchema={SignupSchema}
                         onSubmit={(
 
-                            _values: Values,        
+                            _values: CredentialsDTO,        
 
-                            { setSubmitting }: FormikHelpers<Values>
+                            { setSubmitting }: FormikHelpers<CredentialsDTO>
                         ) => {
                             setTimeout(() => {
                                 navigate("/maths");
                                 setSubmitting(false);
+                                console.log(_values);
                             }, 500);
                         }}
                     >
@@ -51,7 +63,7 @@ export default function Authenticator() {
                             <Field
                                 id="email"
                                 name="email"
-                                placeholder="jane@acme.com"
+                                placeholder="Enter an email"
                                 type="email"
                             />
                              <p className="form-error">{errors.email && touched.email ? <div>{errors.email}</div> : null}</p>
@@ -61,10 +73,12 @@ export default function Authenticator() {
                             <Field
                                 id="password"
                                 name="password"
-                                placeholder="password"
+                                placeholder="Provide a password"
                                 type="password" />
                             <p className="form-error">{errors.password && touched.password ? <div>{errors.password}</div> : null}</p>
-                            <button type="submit">Submit</button>
+                            {/* <ColorButton type="submit" size="small" variant="contained">Enter</ColorButton> */}
+
+                            <button type="submit">&nbsp;Authenticate&nbsp;</button>
                         </Form>
                          )}
                     </Formik>
