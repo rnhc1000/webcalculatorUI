@@ -37,7 +37,7 @@ const myTheme = themeQuartz
     .withPart(iconSetMaterial)
     .withParams({
         accentColor: "#15BDE8",
-        backgroundColor: "none",
+        backgroundColor: "#292D5A",
         borderColor: "#ffffff00",
         borderRadius: 20,
         browserColorScheme: "dark",

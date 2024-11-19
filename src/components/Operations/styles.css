@@ -1,8 +1,8 @@
 .button-delete {
     display: flex;
-  }
+}
   
-  .button-delete:hover {
+.button-delete:hover {
     color: green;
-  }
+}
 
